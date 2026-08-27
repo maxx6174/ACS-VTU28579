@@ -4,12 +4,10 @@ public class FirstUniqueCharacterInAString {
 
         int[] count = new int[26];
 
-        // Count frequency of each character
         for (int i = 0; i < s.length(); i++) {
             count[s.charAt(i) - 'a']++;
         }
 
-        // Find the first character that appears once
         for (int i = 0; i < s.length(); i++) {
             if (count[s.charAt(i) - 'a'] == 1) {
                 return i;
